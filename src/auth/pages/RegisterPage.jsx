@@ -34,7 +34,7 @@ export const RegisterPage = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const { status, errorMessage } = useSelector((state) => state.auth);
   const isCheckingAuthentication = useMemo(
-    () => status === "Checking",
+    () => status === "checking",
     [status]
   );
 
