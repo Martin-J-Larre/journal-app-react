@@ -5,6 +5,7 @@ import {
   logoutFirebase,
 } from "../../firebase/providers";
 import { checkingCredentials, login, logout } from "./";
+import { clearNotesLogout } from "../journal";
 
 export const chechingAuthentication = () => {
   return async (dispatch) => {
@@ -58,6 +59,7 @@ export const startLogout = () => {
   return async (dispatch) => {
     await logoutFirebase();
 
-    dispatch(logout({}));
+    dispatch(clearNotesLogout());
+    dispatch(logout());
   };
 };
