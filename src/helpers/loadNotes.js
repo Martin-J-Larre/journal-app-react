@@ -1,7 +1,6 @@
 import { collection, getDocs } from "firebase/firestore/lite";
 import { FirebaseDB } from "../firebase/config";
 
-// Like getAll in a API
 export const loadNotes = async (uid = "") => {
   if (!uid) throw new Error("The user UID does not exist");
 
