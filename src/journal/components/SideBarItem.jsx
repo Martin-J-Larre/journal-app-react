@@ -10,18 +10,11 @@ import {
 } from "@mui/material";
 import { setActiveNote } from "../../store/journal/journalSlice";
 
-export const SideBarItem = ({ title = "", body, id, date }) => {
+export const SideBarItem = ({ title = "", body, id, date, imageUrls = [] }) => {
   const dispatch = useDispatch();
 
   const onClickNote = () => {
-    const activeNote = {
-      id,
-      title,
-      body,
-      date,
-      imageUrls: [],
-    };
-    dispatch(setActiveNote(activeNote));
+    dispatch(setActiveNote({ title, body, id, date, imageUrls }));
   };
 
   const newTitle = useMemo(() => {
