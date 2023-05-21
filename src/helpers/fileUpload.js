@@ -1,5 +1,6 @@
 export const fileUpload = async (file) => {
-  if (!file) throw new Error("There are not file for upload");
+  // if (!file) throw new Error("There are not file for upload");
+  if (!file) return null;
 
   const baseURL = "https://api.cloudinary.com/v1_1/journal-app-react/upload";
 
@@ -19,6 +20,7 @@ export const fileUpload = async (file) => {
 
     return cloudResp.secure_url;
   } catch (error) {
-    throw new Error(error.message);
+    // throw new Error(error.message);
+    return null;
   }
 };
