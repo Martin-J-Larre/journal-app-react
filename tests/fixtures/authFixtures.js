@@ -8,16 +8,16 @@ export const initialState = {
 };
 
 export const authenticatedState = {
-  status: "authenticated",
-  uid: "123QWE",
-  email: "test@Mail.com",
-  displayName: "Test User",
-  photoURL: "https://demotest.jpg",
+  status: "autheticated",
+  uid: "QWE123",
+  email: "demouser@mail.com",
+  displayName: "Demo user",
+  photoURL: "https://demouser.jpg",
   errorMessage: null,
 };
 
 export const notAuthenticatedState = {
-  status: "not-authenticated",
+  status: "No-Authenticated",
   uid: null,
   email: null,
   displayName: null,
